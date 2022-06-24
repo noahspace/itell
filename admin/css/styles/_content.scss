@@ -1,0 +1,39 @@
+.plugin {
+    .plugin-title {
+        line-height: 36px;
+        color: #999;
+        font-weight: bold;
+    }
+}
+
+.theme {
+    .active {
+        background-color: #eef7ff;
+    }
+
+    td {
+        vertical-align: top;
+    }
+
+    .preview {
+        max-height: 130px;
+    }
+
+    .theme-name {
+        margin: 0;
+    }
+
+    .theme-info {
+        display: flex;
+        gap: 1rem;
+        margin: 0.6rem 0;
+        color: #999;
+    }
+
+    .theme-description {
+        margin: 0 0 0.6rem 0;
+        font-size: 12px;
+        color: #999;
+        white-space: pre-wrap;
+    }
+}

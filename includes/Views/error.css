@@ -1,0 +1,19 @@
+html {
+    padding: 8%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    background: #F6F6F3;
+    word-break: break-all;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    max-width: 560px;
+    padding: 1.6rem 2rem;
+    margin: 0 auto;
+    background: #FFF;
+    box-sizing: border-box;
+}

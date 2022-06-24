@@ -1,0 +1,62 @@
+:root {
+
+    @each $color,
+    $value in $grays {
+        --#{$color}: #{$value};
+    }
+
+    @each $color,
+    $value in $colors {
+        --#{$color}: #{$value};
+    }
+
+    @each $color,
+    $value in $blues {
+        --#{$color}: #{$value};
+    }
+
+    @each $color,
+    $value in $indigos {
+        --#{$color}: #{$value};
+    }
+
+    @each $color,
+    $value in $purples {
+        --#{$color}: #{$value};
+    }
+
+    @each $color,
+    $value in $pinks {
+        --#{$color}: #{$value};
+    }
+
+    @each $color,
+    $value in $reds {
+        --#{$color}: #{$value};
+    }
+
+    @each $color,
+    $value in $oranges {
+        --#{$color}: #{$value};
+    }
+
+    @each $color,
+    $value in $yellows {
+        --#{$color}: #{$value};
+    }
+
+    @each $color,
+    $value in $greens {
+        --#{$color}: #{$value};
+    }
+
+    @each $color,
+    $value in $teals {
+        --#{$color}: #{$value};
+    }
+
+    @each $color,
+    $value in $cyans {
+        --#{$color}: #{$value};
+    }
+}
