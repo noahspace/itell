@@ -31,9 +31,8 @@
             </li>
         </ul>
         <div class="header-item-user">
-            <span class="username">Noah
-                <?php \Itell\Plugin::factory('admin/header.php')->brief() ?>
-            </span>
-            <a href="<?= $option->siteUrl() ?>">返回首页</a>
+            <a class="username user-item">Noah</a>
+            <a href="<?= $option->siteUrl() ?>" class="user-item">返回首页</a>
+            <?php \Itell\Plugin::factory('admin/header.php')->adminHeaderUser() ?>
         </div>
     </div>

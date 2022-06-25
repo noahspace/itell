@@ -111,7 +111,7 @@ class Handler extends Option implements ActionInterface
         $this->updatePlugin($plugins);
 
         // 重定向
-        $this->response->back();
+        $this->response->redirect(WidgetOption::alloc()->adminUrl('plugin.php'));
     }
 
     public function action()

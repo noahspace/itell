@@ -57,6 +57,5 @@ class Plugin implements PluginInterface
 
     public static function main()
     {
-        echo "这是首页插件执行方法，配置的参数是：" . Option::alloc()->plugin('HelloWorld')['value'];
     }
 }

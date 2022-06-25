@@ -1,6 +1,6 @@
 .itell-admin-header-wrap {
     display: flex;
-    background-color: $gray-800;
+    background-color: $primary;
     gap: 1rem;
     align-items: center;
     padding: 0 5%;
@@ -10,11 +10,11 @@
 
         a {
             display: block;
-            color: $gray-100;
-            font-size: 16px;
+            color: $gray-16;
+            text-decoration: none;
 
             &:hover {
-                color: $gray-300;
+                color: $gray-15;
             }
         }
     }
@@ -28,14 +28,13 @@
             .item-link {
                 display: block;
                 padding: 0.8rem 1rem;
-                color: $gray-100;
+                color: $gray-16;
+                text-decoration: none;
             }
 
             &:hover {
                 .item-link {
-                    color: $gray-300;
-                    background-color: $gray-700;
-                    font-weight: bold;
+                    color: $gray-15;
                 }
 
                 .item-submenu {
@@ -45,15 +44,15 @@
 
             &.active {
                 .item-link {
-                    color: $gray-300;
                     font-weight: bold;
+                    color: $gray-16;
                 }
             }
 
             .item-submenu {
                 display: none;
                 position: absolute;
-                background-color: $gray-300;
+                background-color: $primary;
                 min-width: 150px;
 
                 .subitem {
@@ -61,35 +60,20 @@
                         display: block;
                         padding: 10px 16px;
                         position: relative;
-                        color: $gray-700;
-
-                        &::before {
-                            content: "";
-                            display: block;
-                            width: 0;
-                            height: calc(100% - 8px);
-                            position: absolute;
-                            background-color: $blue-700;
-                            top: 4px;
-                            left: 4px;
-                            transition: width .1s ease-in-out;
-                        }
+                        color: $gray-16;
+                        text-decoration: none;
                     }
 
                     &:hover {
                         .subitem-link {
-                            color: $blue-700;
-
-                            &::before {
-                                width: 4px;
-                            }
+                            color: $gray-15;
                         }
                     }
 
                     &.active {
                         .subitem-link {
-                            color: $blue-700;
                             font-weight: bold;
+                            color: $gray-16;
                         }
                     }
                 }
@@ -98,8 +82,16 @@
     }
 
     .header-item-user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .user-item {
+            color: $gray-16;
+            text-decoration: none;
+        }
+
         .username {
-            color: $gray-100;
             font-weight: bold;
         }
     }

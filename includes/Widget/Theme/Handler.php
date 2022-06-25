@@ -61,21 +61,18 @@ class Handler extends Option implements ActionInterface
 
         // 主题配置项
         $themeConfig = [];
-
         // 更新插件配置
         foreach ($this->request->getPost() as $key => $value) {
             $themeConfig[$key] = $value;
         }
-
         // 重新插入插件
         $activatedTheme['config'] = $themeConfig;
-        print_r('<pre>');
-        print_r($activatedTheme);
+
         // 提交修改
         $this->updateTheme($activatedTheme);
 
         // 重定向
-        // $this->response->back();
+        $this->response->redirect(WidgetOption::alloc()->adminUrl('theme.php'));
     }
 
     public function action()

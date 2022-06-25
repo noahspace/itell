@@ -28,4 +28,10 @@ class Response
     {
         header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
+
+    // 重定向
+    public function redirect($url)
+    {
+        header('Location: ' . $url);
+    }
 }

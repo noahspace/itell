@@ -22,8 +22,7 @@ class Plugin implements PluginInterface
      */
     public static function activate()
     {
-        ItellPlugin::factory('admin/header.php')->brief = __CLASS__ . '::render';
-        ItellPlugin::factory('index.php')->main =  __CLASS__ . '::main';
+        ItellPlugin::factory('admin/header.php')->adminHeaderUser = __CLASS__ . '::render';
     }
 
     /**
@@ -57,10 +56,5 @@ class Plugin implements PluginInterface
     public static function render()
     {
         include __DIR__ . '/views/index.php';
-    }
-
-    public static function main()
-    {
-        echo "这是首页插件执行方法，配置的参数是：" . Option::alloc()->plugin('HelloWorld')['value'];
     }
 }

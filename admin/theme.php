@@ -22,7 +22,7 @@ require __DIR__ . '/header.php'; ?>
                     </thead>
                     <tbody>
                         <?php while ($themes->next()) : ?>
-                            <tr class="<?= $theme->is_activated ? 'active' : '' ?>">
+                            <tr class="<?= $themes->is_activated ? 'active' : '' ?>">
                                 <td>
                                     <img class="preview" src="" alt="">
                                 </td>

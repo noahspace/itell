@@ -41,11 +41,19 @@ class Option extends Base
     }
 
     /**
-     * 获取插件选项
+     * 获取插件配置
      */
     public function plugin($pluginName)
     {
         return $this->plugins[$pluginName]['config'];
+    }
+
+    /**
+     * 获取主题配置
+     */
+    public function theme($key)
+    {
+        return $this->theme['config'][$key];
     }
 
     /**
