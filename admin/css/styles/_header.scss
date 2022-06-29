@@ -32,6 +32,13 @@
                 text-decoration: none;
             }
 
+            &.active {
+                .item-link {
+                    font-weight: bold;
+                    color: $gray-16;
+                }
+            }
+
             &:hover {
                 .item-link {
                     color: $gray-15;
@@ -39,13 +46,6 @@
 
                 .item-submenu {
                     display: block;
-                }
-            }
-
-            &.active {
-                .item-link {
-                    font-weight: bold;
-                    color: $gray-16;
                 }
             }
 
@@ -64,16 +64,16 @@
                         text-decoration: none;
                     }
 
-                    &:hover {
-                        .subitem-link {
-                            color: $gray-15;
-                        }
-                    }
-
                     &.active {
                         .subitem-link {
                             font-weight: bold;
                             color: $gray-16;
+                        }
+                    }
+
+                    &:hover {
+                        .subitem-link {
+                            color: $gray-15;
                         }
                     }
                 }

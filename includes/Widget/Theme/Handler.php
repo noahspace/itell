@@ -2,8 +2,8 @@
 
 namespace Itell\Widget\Theme;
 
-use Itell\Widget\ActionInterface;
 use Itell\Widget\Base\Option;
+use Itell\Widget\ActionInterface;
 use Itell\Widget\Option as WidgetOption;
 use Itell\Helper\Renderer;
 use Exception;
@@ -79,9 +79,6 @@ class Handler extends Option implements ActionInterface
     {
         // 启用主题
         $this->on($this->request->is('activate'))->activate($this->request->activate);
-
-        // 停用主题
-        // $this->on($this->request->is('deactivate'))->deactivate($this->request->deactivate);
 
         // 修改主题
         $this->on($this->request->is('config'))->config($this->request->config);
