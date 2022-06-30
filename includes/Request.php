@@ -99,21 +99,16 @@ class Request
     /**
      * 判断查询参数是否满足实际参数
      *
-     * @param mixed $query 条件
+     * @param string $query 条件
      */
     public function is($query)
     {
         $validated = false;
 
-        if (is_string($query)) {
-            parse_str($query, $params);
-        } elseif (is_array($query)) {
-            $params = $query;
-        }
-
+        parse_str($query, $params);
         foreach ($params as $key => $value) {
             $param = $this->get($key);
-            $validated = !empty($param) || $param === $value;
+            $validated = empty($value) ? !empty($param) : $param === $value;
 
             if ($validated) {
                 break;

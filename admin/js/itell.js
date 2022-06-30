@@ -1,5 +1,7 @@
 (() => {
-    /** 激活菜单路由 */
+    /**
+     * 激活菜单路由
+     */
     let currentPageName = /\/([_0-9a-zA-Z-]+).php/.exec(location.href)[1];
 
     document.querySelectorAll('.header-item-menu .subitem-link').forEach(el => {
@@ -17,4 +19,11 @@
             el.parentElement.classList.add('active');
         }
     })
+
+    /**
+     * 通知
+     */
+    let notice = new URLSearchParams(window.document.cookie).get('notice')
+    console.log(notice);
+    window.document.setCookie('notice', '', -1);
 })();

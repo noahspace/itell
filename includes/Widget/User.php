@@ -2,6 +2,8 @@
 
 namespace Itell\Widget;
 
+use Itell\Common;
+use Itell\Helper\Cookie;
 use Itell\Widget\Base\User as BaseUser;
 
 class User extends BaseUser
@@ -26,6 +28,20 @@ class User extends BaseUser
         if ($this->hasLogin !== null) {
             return $this->hasLogin;
         } else {
+            $uid = Cookie::get('uid');
+            if ($uid !== null) {
+                $user = $this->db->get('users', '*', ['uid' => $uid]);
+                if (Common::hashValidate($user['token'], Cookie::get('token'))) {
+                    foreach ($user as $key => $value) {
+                        $this->$key = $value;
+                    }
+                    return $this->hasLogin = true;
+                } else {
+                    return $this->hasLogin = false;
+                }
+            }
+
+            return $this->hasLogin = false;
         }
     }
 
@@ -34,13 +50,8 @@ class User extends BaseUser
      */
     public function logout()
     {
-    }
-
-    /**
-     * 用户登录函数
-     */
-    public function login()
-    {
+        Cookie::delete('uid');
+        Cookie::delete('token');
     }
 
     /**

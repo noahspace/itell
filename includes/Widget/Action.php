@@ -13,7 +13,7 @@ class Action extends Widget
      * 路由映射
      */
     private $map = [
-        'login' => '\Itell\Widget\Login',
+        'user-handler' => '\Itell\Widget\User\Handler',
         'plugin-handler' => '\Itell\Widget\Plugin\Handler',
         'theme-handler' => '\Itell\Widget\Theme\Handler',
     ];

@@ -62,6 +62,71 @@ namespace Itell {
         }
 
         /**
+         * 生成随机字符串
+         *
+         * @param integer $length 字符串长度
+         * @param boolean $mixedCase 混合大小写
+         * @param boolean $specialChars 是否有特殊字符
+         */
+        public static function randString($length, $mixedCase = false, $specialChars = false)
+        {
+            $chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+
+            if ($mixedCase) {
+                $chars .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            }
+
+            if ($specialChars) {
+                $chars .= '.!@#$%^&*()';
+            }
+
+            $result = '';
+            $max = strlen($chars) - 1;
+            for ($i = 0; $i < $length; $i++) {
+                $result .= $chars[rand(0, $max)];
+            }
+            return $result;
+        }
+
+        /**
+         * 对字符串进行 hash 加密
+         *
+         * @param string $string 目标字符串
+         * @param string|null $salt 扰码
+         */
+        public static function hash($string, $salt = null)
+        {
+            $salt = empty($salt) ? self::randString(32) : $salt;
+            $hash = '';
+            $pos = 0;
+            $saltPos = 0;
+
+            while ($pos < strlen($string)) {
+                if ($saltPos === strlen($salt)) {
+                    $saltPos = 0;
+                }
+
+                $hash .= chr(ord($string[$pos]) + ord($salt[$saltPos]));
+
+                $pos++;
+                $saltPos++;
+            }
+
+            return $salt . md5($hash);
+        }
+
+        /**
+         * 验证 hash
+         *
+         * @param string $from 源字符串
+         * @param string $to 目标字符串
+         */
+        public static function hashValidate($from, $to)
+        {
+            return self::hash($from, substr($to, 0, 32)) === $to;
+        }
+
+        /**
          * 错误输出
          */
         public static function error($exception)

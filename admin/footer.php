@@ -1,4 +1,4 @@
-<script src="<?= $option->adminUrl('js/itell.js'); ?>"></script>
+<?php require __DIR__ . '/common-js.php'; ?>
 </body>
 
 </html>

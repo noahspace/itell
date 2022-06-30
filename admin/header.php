@@ -31,7 +31,12 @@
             </li>
         </ul>
         <div class="header-item-user">
-            <a class="username user-item">Noah</a>
+            <?php if ($user->hasLogin()) : ?>
+                <a class="username user-item"><?= $user->username ?></a>
+                <a href="<?= $option->siteUrl('action/user-handler?action=logout') ?>" class="username user-item">退出登录</a>
+            <?php else : ?>
+                <a href="<?= $option->adminUrl('login.php') ?>" class="username user-item">登录</a>
+            <?php endif; ?>
             <a href="<?= $option->siteUrl() ?>" class="user-item">返回首页</a>
             <?php \Itell\Plugin::factory('admin/header.php')->adminHeaderUser() ?>
         </div>
