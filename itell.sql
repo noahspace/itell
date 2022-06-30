@@ -14,10 +14,22 @@ CREATE TABLE IF NOT EXISTS `options` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `options` (`name`, `value`) VALUES
-	('plugins', 'a:1:{s:10:"HelloWorld";a:3:{s:10:"class_name";s:33:"Content\\Plugins\\HelloWorld\\Plugin";s:6:"config";a:1:{s:5:"value";s:12:"Hello World!";}s:7:"handles";a:1:{s:32:"admin/header.php:adminHeaderUser";a:1:{i:0;s:41:"Content\\Plugins\\HelloWorld\\Plugin::render";}}}}'),
+	('plugins', 'a:0:{}'),
 	('rewrite', '0'),
 	('routingTable', 'a:2:{i:0;a:3:{s:4:"regx";s:9:"/^[\\/]?$/";s:6:"widget";s:19:"\\Itell\\Widget\\Index";s:6:"action";s:6:"render";}i:1;a:3:{s:4:"regx";s:35:"/^\\/action\\/([_0-9a-zA-Z-]+)[\\/]?$/";s:6:"widget";s:20:"\\Itell\\Widget\\Action";s:6:"params";a:1:{i:0;s:6:"action";}}}'),
-	('theme', 'a:2:{s:9:"activated";s:7:"default";s:6:"config";a:2:{s:4:"val1";s:10:"默认值1";s:4:"val2";s:10:"默认值2";}}');
+	('theme', 'a:2:{s:9:"activated";s:7:"default";s:6:"config";a:2:{s:4:"val1";s:11:"默认值11";s:4:"val2";s:11:"默认值22";}}');
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `uid` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `username` varchar(60) NOT NULL,
+  `password` varchar(255) NOT NULL DEFAULT '',
+  `email` varchar(100) NOT NULL DEFAULT '',
+  `token` varchar(100) NOT NULL DEFAULT '',
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `users` (`uid`, `username`, `password`, `email`, `token`) VALUES
+	(0, 'admin', '08j7wat389qmb2hxkeg15j7rwm6etzctf6296dff40a8c2ad5130a27581821044', 'admin@admin.com', 'iudkfgs6aha7gkd8g36fjkvp5c6g3hws');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
