@@ -4,7 +4,7 @@
 <div class="itell-main">
     <?php require __DIR__ . '/menu.php'; ?>
     <div class="itell-content-wrap">
-        <h2 class="itell-page-title">仪表盘</h2>
+        <h2 class="itell-page-title">用户</h2>
     </div>
 </div>
 <?php require __DIR__ . '/common-js.php'; ?>

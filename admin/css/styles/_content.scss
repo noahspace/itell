@@ -1,0 +1,144 @@
+.login-wrap {
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 6rem;
+
+    .logo {
+        font-size: 30px;
+        color: $teal-7;
+        text-align: center;
+    }
+
+    .login-form {
+        background-color: $gray-0;
+        border: 1px solid $gray-2;
+        padding: 20px;
+
+        .login-input {
+            display: block;
+            margin-bottom: 12px;
+
+            input {
+                width: 100%;
+                height: 36px;
+                box-sizing: border-box;
+                outline: none;
+                border: 1px solid $gray-2;
+                padding: 0 6px;
+                border-radius: 2px;
+
+                &:focus {
+                    border: 1px solid $teal-7;
+                }
+            }
+        }
+
+        .login-btn {
+            width: 100%;
+            border: 0;
+            font-weight: bold;
+            color: $gray-0;
+            background-color: $teal-7;
+            height: 36px;
+            line-height: 20px;
+            padding: 8px 12px;
+            border-radius: 2px;
+            cursor: pointer;
+            outline: none;
+            box-sizing: border-box;
+            user-select: none;
+
+            &:hover {
+                background-color: darken($teal-7, 6%);
+            }
+        }
+    }
+}
+
+.theme {
+    display: grid;
+    gap: 20px;
+
+    .theme-item {
+        padding-top: 72%;
+        position: relative;
+
+        .preview {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 50px);
+            background-size: contain;
+            background-position: center;
+            border: 1px solid $gray-2;
+            border-bottom: 0;
+            box-sizing: border-box;
+        }
+
+        .theme-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            box-sizing: border-box;
+            font-size: 14px;
+            border: 1px solid $gray-2;
+
+            .area {
+                display: flex;
+                gap: 6px;
+                align-items: center;
+                overflow: hidden;
+
+                .state {
+                    font-weight: bold;
+                    white-space: nowrap;
+                    display: none;
+                }
+
+                .theme-name {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-weight: bold;
+                }
+
+                &.tools {
+                    flex: none;
+                }
+            }
+        }
+
+        &.active {
+            .theme-bar {
+                color: $gray-0;
+                background-color: $gray-9;
+                border: 1px solid $gray-9;
+
+                .area {
+                    .state {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.plugin {
+    .description {
+        margin-bottom: 6px;
+    }
+
+    .copyright {
+        display: flex;
+        gap: 10px;
+        white-space: nowrap;
+    }
+}
