@@ -3,13 +3,11 @@
      * 激活菜单路由
      */
     let currentPageName = /\/([_0-9a-zA-Z-]+).php/.exec(location.href)[1];
-
     document.querySelectorAll('.header-item-menu .subitem-link').forEach(el => {
         if (new RegExp(currentPageName).test(el.href)) {
             el.parentElement.classList.add('active');
         }
     })
-
     const menuMap = {
         'console': ['index', 'plugin', 'theme'],
         'setting': ['profile', 'general'],
@@ -23,7 +21,12 @@
     /**
      * 通知
      */
-    let notice = new URLSearchParams(window.document.cookie).get('notice')
-    console.log(notice);
-    window.document.setCookie('notice', '', -1);
+    let notice = Cookies.get('notice');
+    if (notice) {
+        let noticeEl = document.createElement('div');
+        noticeEl.classList.add('itell-notice');
+        noticeEl.innerText = notice;
+        document.body.append(noticeEl);
+        Cookies.remove('notice');
+    }
 })();

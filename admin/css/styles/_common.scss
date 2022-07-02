@@ -1,8 +1,23 @@
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 5%;
+@font-face {
+    font-family: 'Material Symbols Rounded';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/admin/css/fonts/1.woff2) format('woff2');
+}
+
+.material-symbols-rounded {
+    font-family: 'Material Symbols Rounded';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
 }
 
 .itell-title {
@@ -17,21 +32,21 @@
 
     .tab {
         padding: 6px 10px;
-        color: $primary;
+        color: #000;
         text-decoration: none;
 
         &:hover,
         &.active {
-            color: $gray-16;
-            background-color: $primary;
+            color: #fff;
+            background-color: #000;
         }
     }
 }
 
 .itell-table {
     width: 100%;
-    color: $gray-2;
-    background-color: $gray-15;
+    color: #fff;
+    background-color: #fff;
     padding: 20px;
     margin-bottom: 1rem;
 
@@ -45,7 +60,7 @@
             th,
             td {
                 padding: 14px 14px 14px 0;
-                border-bottom: 2px solid $gray-14;
+                border-bottom: 2px solid #fff;
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
@@ -70,26 +85,26 @@
         padding: 6px 0;
         width: 36px;
         text-align: center;
-        background-color: $gray-15;
+        background-color: #fff;
         color: #333;
         font-size: 12px;
 
         &:hover,
         &.active {
-            color: $gray-16;
-            background-color: $primary;
+            color: #fff;
+            background-color: #000;
         }
     }
 }
 
 .itell-btn {
-    background-color: $primary;
+    background-color: #000;
     border: none;
     cursor: pointer;
     display: inline-block;
     padding: 0 12px;
     height: 32px;
-    color: $gray-16;
+    color: #fff;
     vertical-align: middle;
 }
 
@@ -107,19 +122,19 @@
         display: inline-block;
         padding: 0 12px;
         height: 32px;
-        color: $gray-5;
+        color: #fff;
         vertical-align: middle;
         outline: none;
-        border: 1px solid $gray-12;
+        border: 1px solid #fff;
 
         &:focus {
-            border-color: $primary;
+            border-color: #000;
         }
     }
 
     .itell-description {
         margin-top: 8px;
-        color: $gray-8;
+        color: #fff;
         display: flex;
         flex-direction: column;
         gap: 8px;
