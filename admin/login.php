@@ -8,7 +8,7 @@
             <input type="text" name="account" id="account" placeholder="用户名">
         </div>
         <div class="login-input">
-            <input type="text" name="password" id="password" placeholder="密码">
+            <input type="password" name="password" id="password" placeholder="密码">
         </div>
         <button class="login-btn" type="submit">登录</button>
     </form>

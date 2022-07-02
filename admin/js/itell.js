@@ -9,10 +9,13 @@
 
     // 菜单展开
     let toogleMenuEl = document.querySelector('.itell-navbar .menu-toggle');
-    toogleMenuEl.addEventListener('click', function () {
-        let menuEl = document.querySelector('.itell-menu-wrap');
-        menuEl.classList.toggle('collapse');
-    })
+    if (toogleMenuEl) {
+        toogleMenuEl.addEventListener('click', function () {
+            let menuEl = document.querySelector('.itell-menu-wrap');
+            menuEl.classList.toggle('collapse');
+        });
+    }
+
 
     // 通知
     let notice = Cookies.get('notice');
