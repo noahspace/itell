@@ -1,21 +1,50 @@
 <?php defined('ITELL_ROOT_PATH') || exit; ?>
 <?php $user->hasLogin() || $response->redirect($option->adminUrl('login.php')); ?>
-<div class="itell-navbar">
-    <div class="area">
-        <button class="menu-toggle">
-            <span class="material-symbols-rounded">menu</span>
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container">
+        <h1 class="navbar-brand mb-0" href="#">ITELL</h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="action" href="">
-            <div class="logo"></div>
-            <h1 class="title">ITELL</h1>
-        </a>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto left">
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= $option->adminUrl('index.php') ?>">仪表盘</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= $option->adminUrl('profile.php') ?>">个人资料</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= $option->adminUrl('post.php') ?>">文章</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= $option->adminUrl('media.php') ?>">文件</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= $option->adminUrl('comment.php') ?>">评论</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= $option->adminUrl('theme.php') ?>">主题</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= $option->adminUrl('plugin.php') ?>">插件</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= $option->adminUrl('user.php') ?>">用户</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= $option->adminUrl('general.php') ?>">设置</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= $option->adminUrl('profile.php') ?>">您好，<?= $user->username ?></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= $option->siteUrl('action/user-handler?action=logout') ?>">注销</a>
+                </li>
+                <?php \Itell\Plugin::factory('admin/header.php')->adminHeaderUser() ?>
+            </ul>
+        </div>
     </div>
-    <div class="area">
-        <a class="action" href="">
-            <div class="avatar"></div>
-            <div class="username">您好，Admin</div>
-        </a>
-        <a class="action" href="<?= $option->siteUrl('action/user-handler?action=logout') ?>">注销</a>
-        <?php \Itell\Plugin::factory('admin/header.php')->adminHeaderUser() ?>
-    </div>
-</div>
+</nav>
