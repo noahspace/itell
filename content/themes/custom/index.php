@@ -3,7 +3,7 @@
 /**
  * name: custom
  * url: http://test.io/
- * description: custom 主题
+ * description: custom 主题custom 主题custom 主题custom 主题custom 主题custom 主题custom 主题custom 主题custom 主题custom 主题custom 主题custom 主题custom 主题custom 主题custom 主题custom 主题custom 主题custom 主题custom 主题custom 主题custom 主题custom 主题custom 主题custom 主题custom 主题custom 主题custom 主题
  * version: 1.1.0
  * author: Noah Zhang
  * author_url: http://test.io/

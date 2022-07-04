@@ -25,11 +25,11 @@
                             <tr class="<?= $plugin->is_activated ? ' active' : '' ?>">
                                 <td><?= $plugin->name ?></td>
                                 <td>
-                                    <div><?= $plugin->description ?></div>
-                                    <div class="small">
-                                        <span class="me-2">版本：<strong><?= $plugin->version ?></strong></span>
-                                        <span>作者：<a class="text-decoration-none" href="<?= $plugin->author_url ?>"><strong><?= $plugin->author ?></strong></a></span>
-                                    </div>
+                                    <div class="text-truncate-2" data-bs-toggle="tooltip" data-bs-placement="auto" title="<?= $plugin->description ?>"><?= $plugin->description ?></div>
+                                    <small class="text-muted">
+                                        <span class="me-2">作者：<a href="<?= $plugin->author_url ?>"><?= $plugin->author ?></a></span>
+                                        <span>版本：<?= $plugin->version ?></span>
+                                    </small>
                                 </td>
                                 <td>
                                     <?php if ($plugin->is_complete) : ?>

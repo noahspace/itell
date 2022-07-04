@@ -25,6 +25,3 @@ define('DB_CONFIG', [
 
 // 加载公共类
 require ITELL_ROOT_PATH . 'includes/Common.php';
-
-// 初始化
-\Itell\Common::init();

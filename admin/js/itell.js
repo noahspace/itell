@@ -7,6 +7,10 @@
         }
     });
 
+    // 初始化 tooltip
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
     // 通知
     let notice = Cookies.get('notice');
     if (notice) {
