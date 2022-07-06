@@ -31,6 +31,8 @@ class Plugin
 
     /**
      * 插件
+     *
+     * @param string $handle 插件
      */
     public function __construct($handle)
     {
@@ -70,6 +72,9 @@ class Plugin
 
     /**
      * 激活组件
+     *
+     * @param string $pluginName 插件名
+     * @param array $pluginConfig 插件配置
      */
     public static function activate($pluginName, $pluginConfig)
     {
@@ -81,6 +86,8 @@ class Plugin
 
     /**
      * 禁用组件
+     *
+     * @param string $pluginName 插件名
      */
     public static function deactivate($pluginName)
     {
@@ -89,6 +96,9 @@ class Plugin
 
     /**
      * 插件钩子执行
+     *
+     * @param string $name 钩子名
+     * @param array $args 参数
      */
     public function __call($name, $args)
     {
@@ -102,6 +112,9 @@ class Plugin
 
     /**
      * 设置属性回调
+     *
+     * @param string $name 钩子名
+     * @param array $value 设置属性值
      */
     public function __set($name, $value)
     {

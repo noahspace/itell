@@ -77,7 +77,7 @@ abstract class Widget
     /**
      * 工厂方法
      *
-     * @param mixed $className 组件类名
+     * @param mixed $alias 别名
      * @param mixed $params 参数列表
      */
     public static function factory($alias, $params = null)
@@ -110,7 +110,6 @@ abstract class Widget
      * 类赋值
      *
      * @param mixed $variable 变量
-     * @param string $key 键值
      */
     public function to(&$variable)
     {
@@ -119,6 +118,8 @@ abstract class Widget
 
     /**
      * 行动绑定
+     *
+     * @param boolean $condition
      */
     public function on($condition)
     {

@@ -120,6 +120,8 @@ class Request
 
     /**
      * 获取参数
+     *
+     * @param $name 参数名
      */
     public function __get($name)
     {
