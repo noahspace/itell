@@ -18,9 +18,10 @@ body {
     align-items: center;
     justify-content: center;
     padding: 40px 0;
+    background-color: var(--bs-gray-300);
 
     .form-signin {
-        max-width: 330px;
+        max-width: 450px;
         padding: 16px;
     }
 

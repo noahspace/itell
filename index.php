@@ -1,6 +1,9 @@
 <?php
 // 载入配置
-require  __DIR__ . '/config.php';
+if (!@include __DIR__ . '/config.php') {
+    file_exists(__DIR__ . '/install.php') ? header('Location: /install.php') : print('Missing Config File');
+    exit;
+}
 
 // 初始化
 \Itell\Common::init();

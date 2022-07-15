@@ -17,10 +17,10 @@ define('DB_CONFIG', [
     // [可选]
     'charset' => 'utf8mb4',
     'collation' => 'utf8mb4_general_ci',
-    'port' => 3306,
+    'port' => '3306',
 
     // [可选] 表前缀
-    'prefix' => '',
+    'prefix' => 'root',
 ]);
 
 // 加载公共类

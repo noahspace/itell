@@ -32,7 +32,6 @@ class Option extends Base
 
         // 路由表反序列化
         $this->routingTable = unserialize($this->routingTable) ?: [];
-
         // 激活主题反序列化
         $this->theme = unserialize($this->theme) ?: ['activated' => 'itell', 'config' => []] ?: [];
 
